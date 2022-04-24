@@ -1,0 +1,16 @@
+h1 {
+  display: block;
+  color: #1F1F1F;
+  font-size: 2.8rem;
+  margin: 1rem 0 3rem;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media only screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}

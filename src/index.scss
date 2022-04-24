@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #FFFCED;
+  color: #1F1F1F;
+
+  main {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem 0;
+  }
+
+  .f-align-center { align-items: center;}
+  .f-justify-center { justify-content: center; }
+
+  .rendered-field {
+    position: relative;
+
+    label {
+      display: block;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    input {
+      padding: 0.7rem;
+      border: 2px solid #1F1F1F;
+      color: #1F1F1F;
+      font-size: 1.2rem;
+      background: none;
+    }
+
+    .react-select__control {
+      padding: 0.265rem 0;
+      border-radius: 0;
+      border: 2px solid #1F1F1F;
+      font-size: 1.2rem;
+      background: none;
+    }
+
+    &:focus-within {
+      label { color: #469aad; }
+      input { color: #469aad; border: 2px solid #469aad;  outline: none; }
+      .react-select__control { color: #469aad; border: 2px solid #469aad;  outline: none; }
+      .react-select__control .react-select__single-value { color: #469aad; }
+    }
+    
+    &.error {
+      label { color: red; }
+      input { color: red; border-color: red; }
+      .react-select__control { color: red; border-color: red; }
+    }
+  }
+
+  .rendered-radio-field {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      cursor: pointer;
+    }
+
+    .radiomark {
+      display: inline-block;
+      position: relative;
+      padding: 0.7rem;
+      border: 2px solid #1F1F1F;
+      color: #1F1F1F;
+      font-size: 1.2rem;
+      width: 250px;
+      background-color: transparent;
+      text-align: center;
+
+      label {
+        user-select: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        pointer-events: none;
+      }
+    }
+
+    &:hover input ~ .radiomark {
+      background-color: #457985;
+      border-color: #457985;
+      color:white;
+    }
+
+    input:checked ~ .radiomark {
+      background-color: #325b64;
+      border-color: #325b64;
+      color:white;
+    }
+
+    &.error {
+      label { color: red; }
+      .radiomark { color: red; border-color: red; }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .radiomark {
+        width: 100%;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  button {
+    background: #2B2B2B;
+    color: #FFFFFF;
+    border: 0;
+    padding: 0.7rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    &:hover:not(&:disabled) {
+      color: #325b64;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background: #E7E5D8;
+      color: #B9B7AA;
+    }
+  }
+}

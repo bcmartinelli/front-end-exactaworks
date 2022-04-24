@@ -1,0 +1,43 @@
+.react-confirm-alert-overlay {
+  background: rgba(0, 0, 0, 0.5) !important;
+  .custom-ui {
+    pointer-events: none;
+    background: #f9f9f9;
+    padding: 2rem;
+    h1 {
+      padding: 0;
+      margin: 0 0 1rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      text-align: center;
+      padding: 0;
+      margin: 0 0 2rem;
+    }
+
+    .actions-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        font-size: 0.9rem;
+        flex: 1;
+        cursor: pointer;
+        pointer-events: all;
+
+        &:first-child {
+          background: transparent;
+          color: #1F1F1F;
+          border: 1px solid #1F1F1F;
+          &:hover {
+            color: #325b64;
+            border-color: #325b64;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+#profile-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 100%;
+    max-width: 800px;
+
+    .row {
+      gap: 0.7rem;
+
+      .label-input {
+        display: inline-block;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-left: -3.4em;
+
+        &.error { color: red; }
+      }
+
+      .input-size, .input-size input {
+        width: 100%;
+      }
+
+      button {
+        margin-top: 2rem;
+        min-width: 300px;
+      }
+
+      .divider.label {
+        margin-top: 1.6rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0.7rem 0;
+
+        .label-input {
+          margin: 0;
+        }
+
+        .label-field {
+          width: 100%;
+        }
+
+        .divider {
+          display: none;
+        }
+
+        button {
+          margin-top: 2rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

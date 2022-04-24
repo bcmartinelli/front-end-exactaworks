@@ -1,0 +1,74 @@
+.profiles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .profile-container {
+    display: flex;
+    align-items: stretch;
+    gap: 0.3rem;
+
+    .user-detail {
+      display: flex;
+      flex: 1;
+      gap: 1rem;
+      padding: 1rem;
+      background: #E7E5D8;
+      width: auto;
+      
+      .field {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        label {
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-bottom: 0.5rem;
+        }
+
+        span {
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      background: #d1cfbe;
+      width: auto;
+      min-width: 200px;
+
+      button {
+        background: transparent;
+        font-size: 1rem;
+        padding: 0 1rem;
+
+        &:hover { color: #2B2B2B; }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .profile-container {
+      flex-direction: column;
+      .user-detail {
+        flex-direction: column;
+      }
+
+      .actions {
+        justify-content: center;
+        background: transparent;
+        padding: 0;
+        gap: 0.3rem;
+
+        button {
+          background: #d1cfbe;
+          flex: 1;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
